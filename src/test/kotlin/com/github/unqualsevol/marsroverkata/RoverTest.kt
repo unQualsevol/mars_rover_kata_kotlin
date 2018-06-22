@@ -192,8 +192,6 @@ class RoverTest {
         assertEquals(expectedRover, startRover)
     }
 
-
-
     @Test
     fun should_make_multiple_movements() {
         //Given

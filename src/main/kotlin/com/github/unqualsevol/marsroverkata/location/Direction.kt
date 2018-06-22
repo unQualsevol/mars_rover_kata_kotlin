@@ -14,7 +14,7 @@ enum class Direction {
             return W
         }
 
-        override fun turnRight() : Direction {
+        override fun turnRight(): Direction {
             return E
         }
     },
@@ -31,7 +31,7 @@ enum class Direction {
             return N
         }
 
-        override fun turnRight() : Direction {
+        override fun turnRight(): Direction {
             return S
         }
     },
@@ -48,7 +48,7 @@ enum class Direction {
             return E
         }
 
-        override fun turnRight() : Direction {
+        override fun turnRight(): Direction {
             return W
         }
     },
@@ -65,16 +65,16 @@ enum class Direction {
             return S
         }
 
-        override fun turnRight() : Direction {
+        override fun turnRight(): Direction {
             return N
         }
     };
 
-    abstract fun turnRight() : Direction
+    abstract fun turnRight(): Direction
 
-    abstract fun turnLeft() : Direction
+    abstract fun turnLeft(): Direction
 
-    abstract fun moveForward(position : Coordinate, delta: Int) : Coordinate
+    abstract fun moveForward(position: Coordinate, delta: Int): Coordinate
 
-    abstract fun moveBackward(position : Coordinate, delta: Int) : Coordinate
+    abstract fun moveBackward(position: Coordinate, delta: Int): Coordinate
 }
