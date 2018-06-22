@@ -1,4 +1,4 @@
-package com.githug.unqualsevol.marsroverkata
+package com.github.unqualsevol.marsroverkata
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals

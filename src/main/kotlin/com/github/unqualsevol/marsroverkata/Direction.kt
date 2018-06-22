@@ -1,13 +1,13 @@
-package com.githug.unqualsevol.marsroverkata
+package com.github.unqualsevol.marsroverkata
 
 enum class Direction {
     N {
         override fun moveBackward(position: Coordinate, delta: Int): Coordinate {
-            return Coordinate(position.x, position.y-delta)
+            return Coordinate(position.x, position.y - delta)
         }
 
         override fun moveForward(position: Coordinate, delta: Int): Coordinate {
-            return Coordinate(position.x, position.y+delta)
+            return Coordinate(position.x, position.y + delta)
         }
 
         override fun turnLeft(): Direction {
@@ -20,11 +20,11 @@ enum class Direction {
     },
     E {
         override fun moveBackward(position: Coordinate, delta: Int): Coordinate {
-            return Coordinate(position.x-delta, position.y)
+            return Coordinate(position.x - delta, position.y)
         }
 
         override fun moveForward(position: Coordinate, delta: Int): Coordinate {
-            return Coordinate(position.x+delta, position.y)
+            return Coordinate(position.x + delta, position.y)
         }
 
         override fun turnLeft(): Direction {
@@ -37,11 +37,11 @@ enum class Direction {
     },
     S {
         override fun moveBackward(position: Coordinate, delta: Int): Coordinate {
-            return Coordinate(position.x, position.y+delta)
+            return Coordinate(position.x, position.y + delta)
         }
 
         override fun moveForward(position: Coordinate, delta: Int): Coordinate {
-            return Coordinate(position.x, position.y-delta)
+            return Coordinate(position.x, position.y - delta)
         }
 
         override fun turnLeft(): Direction {
@@ -54,11 +54,11 @@ enum class Direction {
     },
     W {
         override fun moveBackward(position: Coordinate, delta: Int): Coordinate {
-            return Coordinate(position.x+delta, position.y)
+            return Coordinate(position.x + delta, position.y)
         }
 
         override fun moveForward(position: Coordinate, delta: Int): Coordinate {
-            return Coordinate(position.x-delta, position.y)
+            return Coordinate(position.x - delta, position.y)
         }
 
         override fun turnLeft(): Direction {

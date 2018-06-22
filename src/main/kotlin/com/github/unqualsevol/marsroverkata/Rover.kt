@@ -1,4 +1,4 @@
-package com.githug.unqualsevol.marsroverkata
+package com.github.unqualsevol.marsroverkata
 
 data class Rover(var coordinate: Coordinate, var direction: Direction) {
 
