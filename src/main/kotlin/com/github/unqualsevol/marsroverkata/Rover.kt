@@ -3,15 +3,14 @@ package com.github.unqualsevol.marsroverkata
 import com.github.unqualsevol.marsroverkata.commands.Command
 import com.github.unqualsevol.marsroverkata.interpreters.MessageInterpreter
 import com.github.unqualsevol.marsroverkata.interpreters.NASAMessageInterpreter
-import com.github.unqualsevol.marsroverkata.location.Coordinate
-import com.github.unqualsevol.marsroverkata.location.Direction
 import com.github.unqualsevol.marsroverkata.location.Vector
 
 data class Rover(var vector: Vector) {
 
     private lateinit var interpreter: MessageInterpreter
 
-    constructor(x: Int, y: Int, direction: String) : this(Vector(Coordinate(x, y), Direction.valueOf(direction))) {
+    constructor(x: Int, y: Int, direction: String) : this(Vector(x, y, direction))
+    {
         this.interpreter = NASAMessageInterpreter()
     }
 
