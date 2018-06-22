@@ -1,4 +1,4 @@
-package com.github.unqualsevol.marsroverkata
+package com.github.unqualsevol.marsroverkata.location
 
 data class Vector(val coordinate: Coordinate, val direction: Direction) {
 

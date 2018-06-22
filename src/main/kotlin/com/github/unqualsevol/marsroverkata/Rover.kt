@@ -1,5 +1,9 @@
 package com.github.unqualsevol.marsroverkata
 
+import com.github.unqualsevol.marsroverkata.location.Coordinate
+import com.github.unqualsevol.marsroverkata.location.Direction
+import com.github.unqualsevol.marsroverkata.location.Vector
+
 data class Rover(var vector: Vector) {
 
     private val MOVEMENT_INCREMENT : Int = 1
@@ -7,7 +11,7 @@ data class Rover(var vector: Vector) {
     constructor(x: Int, y: Int, direction: String) : this(Vector(Coordinate(x, y), Direction.valueOf(direction)))
 
     fun sendCommands(commands: String) {
-        for (command in commands.split(Regex("(?!^)"))) {
+        for (command in commands.split(Regex(""))) {
             executeCommand(command)
         }
     }
