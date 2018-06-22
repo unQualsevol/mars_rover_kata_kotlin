@@ -1,8 +1,10 @@
 package com.github.unqualsevol.marsroverkata
 
-data class Rover(var coordinate: Coordinate, var direction: Direction) {
+data class Rover(var vector: Vector) {
 
     private val MOVEMENT_INCREMENT : Int = 1
+
+    constructor(x: Int, y: Int, direction: String) : this(Vector(Coordinate(x, y), Direction.valueOf(direction)))
 
     fun sendCommands(commands: String) {
         for (command in commands.split(Regex("(?!^)"))) {
@@ -12,13 +14,13 @@ data class Rover(var coordinate: Coordinate, var direction: Direction) {
 
     private fun executeCommand(command: String) {
         if (command.equals("f")) {
-            coordinate = direction.moveForward(coordinate, MOVEMENT_INCREMENT)
+            vector = vector.moveForward(MOVEMENT_INCREMENT)
         } else if (command.equals("b")) {
-            coordinate = direction.moveBackward(coordinate, MOVEMENT_INCREMENT)
+            vector = vector.moveBackward(MOVEMENT_INCREMENT)
         } else if (command.equals("r")) {
-            direction = direction.turnRight()
+            vector = vector.turnRight()
         } else if (command.equals("l")) {
-            direction = direction.turnLeft()
+            vector = vector.turnLeft()
         }
     }
 
