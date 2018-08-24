@@ -27,6 +27,7 @@ class RoverBuilder {
 companion object {
 //static methods here!
     fun aMarsRover():RoverBuilder = RoverBuilder()
-    fun aMarsRoverAtIrrelevanPosition():RoverBuilder = aMarsRover().at(0,0).pointing("N")
+    fun aMarsRoverAtIrrelevantPosition():RoverBuilder = aMarsRover().at(0,0)
+    fun aMarsRoverAnywherePointingToAnyDirection():RoverBuilder = aMarsRoverAtIrrelevantPosition().pointing("N")
 }
 }
