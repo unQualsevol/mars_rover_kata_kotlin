@@ -9,22 +9,22 @@ class ReceivingUselessCommandTest {
     @Test
     fun should_not_move_rover_with_empty_command() {
         //Given
-        val startRover = RoverBuilder.aMarsRoverAnywherePointingToAnyDirection().build()
+        val startRover = RoverBuilder.aNasaMarsRoverAnywherePointingToAnyDirection().build()
         //When
         startRover.sendCommands("")
         //Then
-        val expectedRover = RoverBuilder.aMarsRoverAnywherePointingToAnyDirection().build()
+        val expectedRover = RoverBuilder.aNasaMarsRoverAnywherePointingToAnyDirection().build()
         assertEquals(expectedRover, startRover)
     }
 
     @Test
     fun should_not_move_rover_with_wrong_command() {
         //Given
-        val startRover = RoverBuilder.aMarsRoverAnywherePointingToAnyDirection().build()
+        val startRover = RoverBuilder.aNasaMarsRoverAnywherePointingToAnyDirection().build()
         //When
         startRover.sendCommands("*")
         //Then
-        val expectedRover = RoverBuilder.aMarsRoverAnywherePointingToAnyDirection().build()
+        val expectedRover = RoverBuilder.aNasaMarsRoverAnywherePointingToAnyDirection().build()
         assertEquals(expectedRover, startRover)
     }
 

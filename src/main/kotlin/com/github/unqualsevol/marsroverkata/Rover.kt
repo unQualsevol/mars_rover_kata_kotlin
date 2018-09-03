@@ -9,9 +9,9 @@ data class Rover(var vector: Vector) {
 
     private lateinit var interpreter: MessageInterpreter
 
-    constructor(x: Int, y: Int, direction: String) : this(Vector(x, y, direction))
+    constructor(x: Int, y: Int, direction: String, interpreter: MessageInterpreter) : this(Vector(x, y, direction))
     {
-        this.interpreter = NASAMessageInterpreter()
+        this.interpreter = interpreter
     }
 
     fun sendCommands(message: String) {
